@@ -1,5 +1,31 @@
 html {
   body {
+    .box {
+      @include box;
+      @include flex-item;
+    }
+    
+    #container1 {
+      @include flexbox;
+    }
+    
+    
+    #container2 {
+      @include flexbox;
+
+      .box {
+        @include flex-item($flex-grow: 2);
+      }
+    }
+    
+    #container3, #container4 {
+      @include flexbox;
+      
+      #box2 {
+        @include flex-item($flex-grow: 2);
+      }
+    }
+    
     
   }
 }
