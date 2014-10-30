@@ -5,6 +5,10 @@ html {
       @include flex-item;
     }
     
+    hr {
+      margin: 1em 0;
+    }
+    
     #container1 {
       @include flexbox;
     }
@@ -23,6 +27,35 @@ html {
       
       #box2 {
         @include flex-item($flex-grow: 2);
+      }
+    }
+    
+    
+    #container5, #container6 {
+      @include flexbox;
+      
+      #box1, #box3 {
+        @include flex-basis(25%);
+      }
+      
+      #box2 {
+        @include flex-basis(50%);
+      }
+    }
+    
+    #container6 {
+      @include flexbox($align-items: center);
+      height: 30em;
+      background: lightblue;
+      
+      .box {
+        @include flexbox($direction: column, $align-items: center, $justify-content: center);
+        height: 10em;
+        
+        text-align: center;
+        p {
+          margin: 0 3em 1em;
+        }
       }
     }
     
