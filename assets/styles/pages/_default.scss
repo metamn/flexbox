@@ -9,8 +9,24 @@ html {
       margin: 1em 0;
     }
     
+    ol {
+      margin: 1em;
+      
+      li {
+        margin-bottom: 1em;
+      }
+    }
+    
     #container1 {
       @include flexbox;
+    }
+    
+    #container1a {
+      @include flexbox($justify-content: space-between);
+    }
+    
+    #container1b {
+      @include flexbox($justify-content: space-around);
     }
     
     
@@ -31,7 +47,7 @@ html {
     }
     
     
-    #container5, #container6 {
+    #container5, #container6, #container7 {
       @include flexbox;
       
       #box1, #box3 {
@@ -43,7 +59,7 @@ html {
       }
     }
     
-    #container6 {
+    #container6, #container7 {
       @include flexbox($align-items: center);
       height: 30em;
       background: lightblue;
@@ -51,10 +67,22 @@ html {
       .box {
         @include flexbox($direction: column, $align-items: center, $justify-content: center);
         height: 10em;
-        
         text-align: center;
+        
         p {
-          margin: 0 3em 1em;
+          @include box;
+        }
+      }
+    }
+    
+    #container7 {
+      @include mobile {
+        @include flexbox($wrap: wrap);
+        height: auto;
+        
+        #box1, #box2, #box3 {
+          @include flex-basis(100%);
+          height: auto;
         }
       }
     }

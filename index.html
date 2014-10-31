@@ -8,6 +8,16 @@ title: Home
   <div id="box2" class="box">Box 2</div>
 </div>
 
+<div id="container1a" class="container">
+  <div id="box1" class="box">Box 1 // space-between</div>
+  <div id="box2" class="box">Box 2</div>
+</div>
+
+<div id="container1b" class="container">
+  <div id="box1" class="box">Box 1 // space-around</div>
+  <div id="box2" class="box">Box 2</div>
+</div>
+
 <hr/>
 
 <div id="container2" class="container">
@@ -49,3 +59,27 @@ title: Home
   <div id="box2" class="box">Box 2, flex-basis: 50%</div>
   <div id="box3" class="box">Box 3, flex-basis: 25%</div>
 </div>
+
+<hr/>
+
+<div id="container7" class="container">
+  <p>Mobile version:</p>
+  <div id="box1" class="box">
+    <p>Box 1, flex-basis: 25%</p>
+    <p>@include flexbox($direction: column, $align-items: center, $justify-content: center);</p>
+    <p>text-align: center</p>
+  </div>
+  <div id="box2" class="box">Box 2, flex-basis: 50%</div>
+  <div id="box3" class="box">Box 3, flex-basis: 25%</div>
+</div>
+
+
+
+<hr/>
+
+<ol>
+  <li>1. Everything inside a flexbox is a flex item, automatically. Even :before , :after etc.</li>
+  <li>2. Content size does not necesarilly fit inside a flex item. It can overflow, or items positioned over each other. Check mobile versions</li>
+  <li>3. Avoid fixed widths and heights. Let content flow freely</li>
+  <li>4. Don't make something responsive by changing $direction from row to column. Instead use wrap</li>
+</ol>
