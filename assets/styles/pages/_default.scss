@@ -14,7 +14,24 @@ html {
     }
 
     #about {
-      min-height: 10em;
+      min-height: 30em;
+    }
+
+    #works {
+      //height: 100vh;
+      position: relative;
+
+      article {
+        //position: absolute;
+        background: grey;
+        width: 95%;
+        height: 90vh;
+        margin: 5vh 2.5%;
+      }
+    }
+
+    #footer {
+      min-height: 5em;
     }
 
     #header, #about, #footer {
