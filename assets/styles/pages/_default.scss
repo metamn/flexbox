@@ -91,6 +91,14 @@ html {
     #container8 {
       @include flexbox($wrap: wrap);
       
+      #box4, #box6, #box7, #box9 {
+        @include flex-basis(25%);
+      }
+      
+      #box5, #box8 {
+        @include flex-basis(50%);
+      }
+      
       #box1, #box4, #box7 {
         height: 10em;
       }
